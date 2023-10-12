@@ -1,4 +1,4 @@
-- name: install httpd
+- name: install nginx
   hosts: WEB
   become: true
   roles:

@@ -1,9 +1,10 @@
-- name: install httpd
+- name: install nginx
   ansible.builtin.yum:
-    name: httpd
+    name: nginx
     state: latest
 
-- name: start httpd
+- name: start nginx
   ansible.builtin.service:
-    name: httpd
+    name: nginx
     state: started
+    enabled: yes
