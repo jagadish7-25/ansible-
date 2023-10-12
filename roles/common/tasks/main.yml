@@ -1,7 +1,7 @@
 - name: install nginx
   ansible.builtin.yum:
     name: nginx
-    state: latest
+    state: installed
 
 - name: start nginx
   ansible.builtin.service:
