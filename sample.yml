@@ -2,7 +2,7 @@
   hosts: WEB
   become: true
   tasks:
-    - name: installing nginx
+    - name: install nginx
       ansible.builtin.yun:
         name: nginx
         state: latest
