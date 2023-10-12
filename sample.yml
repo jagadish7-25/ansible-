@@ -1,0 +1,8 @@
+- name: install nginx
+  hosts: WEB
+  become: true
+  tasks:
+    - name: installing nginx
+      ansible.builtin.yun:
+        name: nginx
+        state: latest
