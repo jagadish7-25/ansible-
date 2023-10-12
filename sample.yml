@@ -3,6 +3,6 @@
   become: true
   tasks:
     - name: install nginx
-      ansible.builtin.yun:
+      ansible.builtin.yum:
         name: nginx
         state: latest
