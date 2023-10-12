@@ -1,0 +1,5 @@
+- name: install httpd
+  hosts: WEB
+  become: true
+  roles:
+    - common
