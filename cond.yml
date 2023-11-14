@@ -3,7 +3,7 @@
   become: true
   vars:
     car: true
-    bike: true
+    bike: flase
   tasks:
     - name: Printing  car names
       ansible.builtin.debug:
