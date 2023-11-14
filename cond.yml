@@ -7,10 +7,10 @@
   tasks:
     - name: Printing  car names
       ansible.builtin.debug:
-        msg: car name is DODGE
+        msg: car name - DODGE
         when: car is true
 
     - name: Printing bike names
       ansible.builtin.debug:
-        msg: Bike name is HARLEY
+        msg: bike name - HARLEY
         when: bike is true
