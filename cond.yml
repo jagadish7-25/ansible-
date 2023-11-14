@@ -8,9 +8,9 @@
     - name: Printing  car names
       ansible.builtin.debug:
         msg: car name - DODGE
-        when: car is true
+      when: car is true
 
     - name: Printing bike names
       ansible.builtin.debug:
         msg: bike name - HARLEY
-        when: bike is true
+      when: bike is true
