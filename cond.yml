@@ -1,11 +1,16 @@
 - name: Demo on cond
   hosts: all
   become: true
+  vars:
+    car: true
+    bike: true
   tasks:
     - name: Printing  car names
       ansible.builtin.debug:
         msg: car name is DODGE
+        when: car is true
 
     - name: Printing bike names
       ansible.builtin.debug:
         msg: Bike name is HARLEY
+        when: bike is true
