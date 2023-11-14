@@ -14,3 +14,11 @@
       ansible.builtin.debug:
         msg: bike name - HARLEY
       when: bike is true
+
+    - name: installing nginx
+      ansible.builtin.yum:
+        name: nginx
+        state: latest
+      with_items: "{{ ansible_mounts }}"
+      when: item.mount == "/" and item.size_available > 10737400
+
