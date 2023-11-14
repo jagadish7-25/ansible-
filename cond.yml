@@ -19,6 +19,4 @@
       ansible.builtin.yum:
         name: nginx
         state: latest
-      with_items: "{{ ansible_mounts }}"
-      when: item.mount == "/" and item.size_available > 10737400
-
+      when: ansible_distribution == 'CentOS' and ansible_distribution_major_version == '7'
