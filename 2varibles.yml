@@ -1,0 +1,16 @@
+- name: variables
+  hosts: localhost
+  connection: local
+  become: true
+  vars:
+    URL : youtube.com
+  tasks:
+    - name: play with variables
+      ansible.builtin.debug:
+        msg: URL is "{{ URL }}"
+
+    - name: play with local variables
+      ansible.builtin.debug:
+        msg : URL is "{{ URL }}"
+      vars:
+        URL : Facebook.com
